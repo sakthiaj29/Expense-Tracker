@@ -1,0 +1,29 @@
+.bar-chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    margin-top: 100px;
+  }
+  
+  .bar-chart-wrapper {
+    display: flex;
+    align-items: center;
+    overflow: auto; /* Enables the scrollbar */
+    max-width: 800px; /* Adjust as needed to limit the width */
+  }
+  .heading {
+    margin-bottom: 50px; /* Add space between the heading and the chart */
+  }
+  .bar-chart {
+    width: 300px; /* Adjust the width to make it bigger */
+    height: 300px; /* Adjust the height to make it bigger */
+    margin-right: 20px; /* Add a gap between the chart and the legend */
+  }
+  
+  .legend {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  

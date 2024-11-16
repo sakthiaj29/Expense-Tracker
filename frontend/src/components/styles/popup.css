@@ -1,0 +1,134 @@
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 14px;
+  z-index: 9999;
+}
+
+.popup-overlay.visible {
+  visibility: visible;
+  opacity: 1;
+  z-index: 9999;
+}
+
+.form-container {
+  height: 90vh;
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.input-form-heading {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #333;
+  font-weight: 600;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between; /* Align label and input on opposite sides */
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 10px; /* Space between fields */
+}
+
+.input-container label {
+  font-size: 14px;
+  color: #555;
+  width: 40%; /* Adjust label width */
+  text-align: left; /* Align label to the left */
+}
+
+.input-container input,
+.input-container select {
+  width: 70%; /* Adjust input field width */
+  padding: 10px;
+  border: 1px solid #b7f0fa;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-container input[type="text"]:focus,
+.input-container input[type="date"]:focus,
+.input-container input[type="time"]:focus,
+.input-container input[type="number"]:focus,
+.input-container select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.radio-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+.radio-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radio-input-container label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Buttons */
+.button-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.submit-button,
+.cancel-button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.cancel-button:hover {
+  background-color: #d32f2f;
+  transform: translateY(-3px);
+}

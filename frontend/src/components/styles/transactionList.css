@@ -1,0 +1,185 @@
+.transaction-list-container {
+  font-size: 14px;
+  margin-left: 220px;
+  width: 70vw;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 89vh; /* Max height for the entire container */
+  overflow: hidden;
+}
+
+.transaction-list-container h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.pagination-filter-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination-controls label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.pagination-controls select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end; /* Aligns filter controls to the right */
+}
+
+.filter-controls label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.filter-controls select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.transaction-list {
+  flex-grow: 1;
+  overflow-y: auto; /* Allows scrolling within the table */
+  margin-bottom: 20px;
+}
+
+.transaction-list table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Prevents the table from expanding beyond container width */
+}
+
+.transaction-list th,
+.transaction-list td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.transaction-list th {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  background-color: #f7f9fc;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.transaction-list tbody tr:hover {
+  background-color: #f2f8fc;
+}
+
+.transaction-list td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+td button {
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+td button:last-child {
+  background-color: #ff9800;
+}
+
+td button:last-child:hover {
+  background-color: #e65100;
+}
+
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #4a90e2;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button:hover {
+  background-color: #3a78c2;
+  transform: translateY(-3px);
+}
+
+.pagination button.active {
+  background-color: #333;
+}
+.pagination .delete-btn{
+  background-color: #f44336;
+}
+
+/* Responsive Styling for Mobile Devices */
+@media (max-width: 768px) {
+  .transaction-list-container {
+    width: 90vw;
+    margin-left: 0;
+  }
+
+  .transaction-list table {
+    width: 100%;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pagination-controls {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .filter-controls {
+    justify-content: center;
+    width: 100%;
+  }
+}

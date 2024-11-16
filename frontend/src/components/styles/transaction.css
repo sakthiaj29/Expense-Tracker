@@ -1,0 +1,183 @@
+/* Overall Container Styling */
+.transaction-full-container {
+  min-height: 100vh;
+  background-color: rgb(244, 246, 248);
+  padding: 10px; /* Ensure there’s padding around the content */
+}
+
+/* Heading Styling */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Button Container Styling */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Add Transaction Button Styling */
+.add-transaction-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  margin-left: 220px; /* Align with transaction box */
+}
+
+.add-transaction-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Form Popup Styling */
+.form-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  backdrop-filter: blur(8px);
+  width: 400px; /* Fixed width for the form */
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-container button[type="submit"] {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Transaction Box Styling */
+.transaction-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.transaction-box {
+  flex: 1;
+  max-width: 250px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+  margin-left: 220px; /* Same margin as the button */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transaction-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Specific Color for Different Transaction Types */
+.transaction-box.income {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.transaction-box.expense {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.transaction-box.balance {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.transaction-box.transaction-count {
+  background-color: #9c27b0;
+  color: #fff;
+}
+
+/* Transaction Value Styling */
+.transaction-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.transaction-desc {
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .transaction-box-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .transaction-box,
+  .form-container {
+    width: 100%;
+    max-width: 400px;
+    margin-left: 0;
+  }
+
+  .add-transaction-button {
+    margin-left: 0; /* Reset the margin on small screens */
+  }
+}

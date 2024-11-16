@@ -1,0 +1,251 @@
+/* Right Container General Styling */
+.right-container {
+    display: flex;
+    height: auto;
+    margin-left: 200px;
+    flex-direction: column;
+    background-color: #f7f9fc;
+    gap: 20px;
+    width: calc(100vw - 220px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Flex Container for Balance and Income Charts */
+.account-balance-and-income-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+/* Styling for Account Balance and Income Chart Boxes */
+.account-balance-container,
+.income-container {
+    flex: 1; /* Equal width for both containers */
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 5px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 0;
+}
+
+.account-balance-container:hover,
+.income-container:hover {
+    transform: translateY(-5px); /* Hover effect for a modern look */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .account-balance-and-income-container {
+        flex-direction: column; /* Stack containers vertically */
+    }
+
+    .account-balance-container,
+    .income-container {
+        width: 100%;
+        height: 50vh; /* Adjusted height for mobile screens */
+    }
+}
+
+/* Additional General Styling for Text and Headers */
+.card-value {
+    font-size: 24px;
+    font-weight: 600;
+    color: inherit; /* Inherit color from parent box */
+    margin-bottom: 5px;
+}
+
+.card-desc {
+    font-size: 14px;
+    color: inherit; /* Inherit color from parent box */
+}
+
+/* Styling for Boxes in Income/Expense/Balance Section */
+.income-expense-balance-transactions {
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    box-sizing: border-box;
+}
+
+.income-box,
+.expense-box,
+.balance-box,
+.transactions-box {
+    width: 22%; 
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 0;
+}
+
+.income-box:hover,
+.expense-box:hover,
+.balance-box:hover,
+.transactions-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.income-box {
+    color: #4caf50; /* Green for income */
+}
+
+.expense-box {
+    color: #f44336; /* Red for expense */
+}
+
+.balance-box {
+    color: #2196f3; /* Blue for balance */
+}
+
+.transactions-box {
+    color: #9c27b0; /* Purple for transactions */
+}
+
+/* Ensure the <p> tags inside these boxes inherit the color */
+.income-box p,
+.expense-box p,
+.balance-box p,
+.transactions-box p {
+    color: inherit; /* Inherit the color from parent box */
+}
+
+/* Donut Chart and Other Charts Styling */
+.total-expenses-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    height: 60%;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 20px; /* Space between Total Transactions and DonutChart */
+}
+
+.total-expenses-container p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.total-expenses-container .donut-chart-container {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .total-expenses-container {
+        width: 100%;
+        height: 50vh;
+    }
+}
+
+/* Filter and other components styling */
+.transaction-full-container {
+  min-height: 100vh;
+  background-color: rgb(244, 246, 248);
+  padding: 10px; /* Ensure there’s padding around the content */
+}
+
+.add-transaction-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  margin-left: 220px; /* Align with transaction box */
+}
+
+.add-transaction-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+.transaction-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.transaction-box {
+  flex: 1;
+  max-width: 250px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+  margin-left: 220px; /* Same margin as the button */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transaction-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.transaction-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.transaction-desc {
+  font-size: 16px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .transaction-box-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .transaction-box,
+  .form-container {
+    width: 100%;
+    max-width: 400px;
+    margin-left: 0;
+  }
+
+  .add-transaction-button {
+    margin-left: 0; /* Reset the margin on small screens */
+  }
+}

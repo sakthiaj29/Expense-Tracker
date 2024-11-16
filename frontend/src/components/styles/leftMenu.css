@@ -1,0 +1,148 @@
+.left-menu-container {
+    height: 100vh;
+    width: 200px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 100001;
+    padding-top: 20px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #4a90e2;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 10px 0;
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #4a90e2;
+    margin-bottom: 0.5rem;
+}
+
+.profile-name {
+    font-size: 14px;
+    color: #333333;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.left-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.left-menu a {
+    width: 90%;
+    padding: 12px 0;
+    font-size: 14px;
+    color: #333333;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin: 0.5rem 0;
+    font-weight: 500;
+}
+
+.left-menu a:hover {
+    background-color: #e3f2fd;
+    color: #4a90e2;
+}
+
+.left-menu a.active {
+    background-color: #4a90e2;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Styling for Sign Out Button */
+.sign-out-button {
+    margin-top: auto; /* Pushes the button to the bottom */
+    width: 90%;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #f44336; /* Red color for sign out */
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-out-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .modal p {
+    margin: 10px 0;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .confirm-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cancel-button {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
